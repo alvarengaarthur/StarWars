@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="starwars.css">
+        <script src="vue.js"></script>
+    </head>
+    <body>
+        <div class="canvas">
+            <div class="title">
+                star wars
+            </div>
+            <div class="subtitle">
+                characters
+            </div>
+            <div class="search">
+                <input id="searchbar" type="text" placeholder="Search for characters..">
+            </div>
+            <main>
+                <div id="box" v-for="person in people">
+    
+                    <div class="charbox" v-on:click="expland">
+                        
+                        <div class="picture"></div>
+                        
+                        <div id="name">
+                            {{ person.name }}
+                        </div>
+
+                        <div id="info">
+                            {{ person.height }} cm
+                        </div>
+                        
+                        <div id="info">
+                            {{ person.gender }}
+                        </div>
+                    </div>
+                </div>
+            </main>
+        
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+            const url = 'https://swapi.co/api/people/?format=json';
+            new Vue({
+                el: 'main',
+                data: {
+                    people: []
+                },
+                methods: {
+                    loadPeople() {
+                        axios.get(url)
+                            .then((response) => {
+                                this.people = response.data.results;
+                            });
+                    }
+                },
+                mounted() {
+                    // When the Component is ready fetch the JSON from the Server Backend
+                    this.loadPeople();
+                },
+            });
+        </script>
+    </body>
+</html>

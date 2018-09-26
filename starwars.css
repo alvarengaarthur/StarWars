@@ -1,0 +1,89 @@
+* {
+    background-color: black;
+/*    background-image: linear-gradient(#1919FF,#000000);*/
+    background-attachment:fixed;
+}
+
+body {
+    margin: 0;
+}
+
+.canvas {
+    position: relative;
+    padding-left: 121px;
+    padding-right: 121px;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Star Jedi Rounded";
+    letter-spacing: 1.5px;
+    color: #FBCF58;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 17px;
+    margin-top: -15px;
+    font-family: "Star Jedi Rounded";
+    letter-spacing: 1.5px;
+    color: #FBCF58;
+}
+
+.search {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+input[type=text] {
+    text-align: center;
+    width: 700px;
+    border: none;
+    color: #FBCF58;
+    font-family: 'SF Pro Display';
+    font-size:60px;
+    letter-spacing: -4px;
+}
+
+input:focus { outline:none !important; }
+input:focus::-webkit-input-placeholder { color:transparent; }
+
+::placeholder {
+    color: #FBCF58;
+    opacity: .3;
+}
+
+.charbox {
+    float: left;
+    width: 221px;
+    padding: 39px;
+}
+
+.picture {
+    position: relative;
+    width: 106px;
+    height: 2px;
+    background-color: #FBCF58;
+/*    opacity: .2;*/
+}
+
+#name {
+    text-align: left;
+    font-size: 15px;
+    padding-top: 5px;
+    font-family: "Roboto";
+    letter-spacing: 1.5px;
+    color: #FBCF58;
+}
+
+#info {
+    text-align: left;
+    font-size: 12px;
+    padding-top: 5px;
+    font-family: "Roboto";
+    letter-spacing: 1.5px;
+    color: #FBCF58;
+    opacity: .5;
+}
